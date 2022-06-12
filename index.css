@@ -1,0 +1,118 @@
+@font-face {
+    font-family: ImportedFont;
+    src: url(fonts/CursedTimerUlil-Aznm.ttf);
+}
+:root{
+    --ff-primary-font: ImportedFont, sans-serif;
+    --clr-background-primary: #4A411B;
+    --clr-background-container: #1B244A;
+    --clr-font-Scoreboard: red;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, 
+body {
+    height: 100%;
+
+}
+
+body{
+    background-color: var(--clr-background-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#main-container{
+    margin-inline: auto;
+    width: min(90%, 45rem);
+    height: 35rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1B244A;
+
+
+}
+/* horizontal height */
+@media (max-width: 35rem){
+    #main-container{
+        flex-direction: column;
+        height: 50rem;
+    }
+    html, 
+    body {
+    height: 50rem;
+    }
+}
+
+.Team-Header{
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 650;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.scoreboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+
+.Curr-score{
+    color: #F94F6D;
+    font-family: var(--ff-primary-font);
+    font-weight: 400;
+    font-size: 7rem;
+    text-align: center;
+    background-color: #080001;
+    width: 14rem;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+.increment-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.increment-value-container{
+    width: 30%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid #9AABD8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Curr-score{
+    margin-bottom: 1.5rem;
+}
+
+.increment-value-container p {
+    color: #9AABD8;
+
+}
+.increment-value-container:active{
+    color: #4B5563;
+    border: .1rem solid #4B5563;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
